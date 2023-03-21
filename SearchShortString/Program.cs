@@ -11,4 +11,14 @@ string InputStr(string msg)
     return (Console.ReadLine());
 }
 
+string[] GenArray(int len)
+{
+    string[] newArray = new string[len];
+    for (int i = 0; i < len; i++)
+    {
+        newArray[i] = InputStr($"{i+1}-й элемент");
+    }
+    return newArray;
+}
+
 
