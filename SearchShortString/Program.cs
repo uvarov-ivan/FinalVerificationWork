@@ -21,4 +21,28 @@ string[] GenArray(int len)
     return newArray;
 }
 
+(string[], int) SearchShotString(string[] array, int maxLengthStr)
+{
+    int countElement = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= maxLengthStr)
+        {
+            (array[i], array[countElement]) = (array[countElement], array[i]);
+            countElement++;
+        }
+    }
+    return(array, countElement);
+}
+
+string[] ResaltArray (string[]array, int countElement)
+{
+    string[] resaltArray = new string [countElement];
+    for (int i = 0; i < countElement; i++)
+    {
+        resaltArray[i] = array[i];
+    }
+    return resaltArray;
+}
+
 
