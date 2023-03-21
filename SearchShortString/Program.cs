@@ -45,4 +45,13 @@ string[] ResaltArray (string[]array, int countElement)
     return resaltArray;
 }
 
+void PrintArray (string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}, ");
+    }
+    System.Console.WriteLine();
+}
+
 
