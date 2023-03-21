@@ -54,4 +54,9 @@ void PrintArray (string[] array)
     System.Console.WriteLine();
 }
 
-
+int arrayLength = InputInt("длину массива");
+int maxLengthString = InputInt("максимальную длину строки которую будем искать");
+string[]myArray = GenArray(arrayLength);
+PrintArray(myArray);
+(string[]newArray, int amountElements) = SearchShotString(myArray,maxLengthString);
+PrintArray(ResaltArray(newArray,amountElements));
